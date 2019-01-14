@@ -26,11 +26,11 @@ public class Game {
 					System.out.println("It's a tie!");
 				} else if (playerOne.getType().beats(playerTwo.getType())) {
 					System.out.println(
-							playerOne.getLastName() + " win! " + playerOne.getType() + " beats " + playerTwo.getType());
+							playerOne.getLastName() + " wins! " + playerOne.getType() + " beats " + playerTwo.getType());
 					playerOne.win();
 				} else {
 					System.out.println(
-							playerTwo.getLastName() + " win! " + playerOne.getType() + " beats " + playerTwo.getType());
+							playerTwo.getLastName() + " wins! " + playerOne.getType() + " beats " + playerTwo.getType());
 					playerTwo.win();
 				}
 			} catch (TypeException e) {
