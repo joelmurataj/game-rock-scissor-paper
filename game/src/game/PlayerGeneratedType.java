@@ -1,17 +1,16 @@
 package game;
 
-
-public class PlayerGeneratedType extends Player{
+public class PlayerGeneratedType extends Player {
 
 	private Type type;
 	private final int ROCK = 1;
 	private final int SCISSOR = 2;
 	private final int PAPER = 3;
-	
-	public PlayerGeneratedType(String firstName, String lastName, int age) throws TypeException {
+
+	public PlayerGeneratedType(String firstName, String lastName, int age) {
 		super(firstName, lastName, age);
 	}
-	
+
 	public void setType(int type) throws TypeException {
 		if (type == ROCK) {
 			this.setType(Type.ROCK);
@@ -23,7 +22,7 @@ public class PlayerGeneratedType extends Player{
 			throw new TypeException("This type doesnt exist");
 		}
 	}
-	
+
 	public Type getType() {
 		return type;
 	}
@@ -31,5 +30,5 @@ public class PlayerGeneratedType extends Player{
 	public void setType(Type type) {
 		this.type = type;
 	}
-	
+
 }

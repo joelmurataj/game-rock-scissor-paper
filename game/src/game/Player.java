@@ -1,46 +1,48 @@
 package game;
 
-public class Player {
+public class Player extends Person {
 
-	private String firstName;
-	private String lastName;
-	private int age;
+	private Type type;
 	private int score;
+	private final int ROCK = 1;
+	private final int SCISSOR = 2;
+	private final int PAPER = 3;
+
+	public Player(String firstName, String lastName, int age, Type type) {
+		super(firstName, lastName, age);
+		this.type = type;
+		score=0;
+	}
 	
 	public Player(String firstName, String lastName, int age) {
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.age = age;
-		score=0;
+		super(firstName, lastName, age);
+	}
+
+	public void setType(int type) throws TypeException {
+		if (type == ROCK) {
+			this.setType(Type.ROCK);
+		} else if (type == SCISSOR) {
+			this.setType(Type.SCISSOR);
+		} else if (type == PAPER) {
+			this.setType(Type.PAPER);
+		} else {
+			throw new TypeException("This type doesnt exist");
+		}
 	}
 	
 	public void win() {
 		score++;
 	}
+
+	public Type getType() {
+		return type;
+	}
 	
-	public String getFirstName() {
-		return firstName;
-	}
-	public String getLastName() {
-		return lastName;
-	}
-	public int getAge() {
-		return age;
-	}
-
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
-
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
-
-	public void setAge(int age) {
-		this.age = age;
+	private void setType(Type type) {
+		this.type = type;
 	}
 	public int getScore() {
 		return score;
 	}
-	
+
 }
