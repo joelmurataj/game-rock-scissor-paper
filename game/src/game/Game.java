@@ -40,6 +40,13 @@ public class Game {
 		}
 	}
 	
+	public void displayScores() {
+		System.out.println();
+		System.out.println("Scores:");
+		System.out.println(playerOne.getLastName() + ": " + playerOne.getScore());
+		System.out.println(playerTwo.getLastName() + ": " + playerTwo.getScore());
+	}
+	
 	public Player getPlayerOne() {
 		return playerOne;
 	}

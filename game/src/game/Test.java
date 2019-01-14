@@ -9,10 +9,7 @@ public class Test {
 
 		Game game = new Game(playerWithOneType, playerWithRandomType);
 		game.plays(100);
-		System.out.println();
-		System.out.println("Scores:");
-		System.out.println(playerWithOneType.getLastName() + ": " + playerWithOneType.getScore());
-		System.out.println(playerWithRandomType.getLastName() + ": " + playerWithRandomType.getScore());
+		game.displayScores();
 	}
 
 }
